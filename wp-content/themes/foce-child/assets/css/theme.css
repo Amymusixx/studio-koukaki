@@ -43,7 +43,7 @@
 
 
   /* Animation de rotation à l'infini pour les fleurs */ 
-  .story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after {
+  .story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after, #oscars h3::before, #oscars h3::after, .site-footer ul::after {
     animation-name: rotation;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -56,24 +56,98 @@
 
 /* Animation pour les titres */
 
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .titre-animation {
+    animation: wipe-enter 2s 1;
+  }
+}
+
 
   /* -------- Ajout de la section Oscars -------- */
   #oscars h3 {
-    background-image: url("./assets/images/oscars-fond.png");
-    color:black;
+    background-image: url("../images/oscars-fond.png") ;
+    font-size: 3rem;
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 3em 2em;
+	margin: 0;
+	background-position: center;
+    color:white;
     text-align:left;
+  }
+
+  @media screen and (max-width: 1192px) {
+    #oscars h3 {
+      font-size: 2.5em;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    #oscars div {
+      width:85%;
+      padding-left:15px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    #oscars h3 {
+      font-size: 2rem;
+    }
+    #oscars .section-oscars-boxes::after {
+      position:absolute;
+      left:60%;
+      bottom:40%;
+    }
+  }
+
+  .section-oscars-boxes::after {
+    content: url("../images/logo_oscars_transp.png");
+    position:absolute;
+    left:70%;
+    bottom:44%;
+  }
+
+  #oscars h3::before {
+    content: url("../images/Sunflower.png");
+    position:absolute;
+    bottom:70%;
+    right:80%;
+  }
+
+  #oscars h3::after {
+    content: url("../images/orchid.png");
+    position:absolute;
+    bottom:90%;
+    left:93%;
   }
 
   .section-oscars-boxes {
     display:flex;
     flex-direction:row;
-    justify-content:center;
+    margin: 100px 0px 75px 0px;
+    padding-left:200px;
+  }
+
+  .oscars-nomination {
+    display:flex;
+    flex-direction:row;
+    width:20%;
   }
 
   .titre-oscars-box {
     display:flex;
     flex-direction:row;
-    width:60%;
+    justify-content:flex-start;
+    width:70%;
   }
 
   /* Disparition des fleurs sur la section studio */
@@ -85,6 +159,44 @@
     visibility:hidden;
   }
 
-  #oscars::after {
-    content: url("./assets/images/orchid.png");
-  }
+  /* Ajout de la vidéo dans la première section de l'accueil */
+  #background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    }
+
+    .banner {
+      min-height: 782px;
+    }
+
+    @media screen and (max-width: 700px) {
+      #background-video {
+        visibility:hidden;
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translatey(0px);
+      }
+      50% {
+        transform: translatey(-40px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
+
+    .avatar {
+      overflow: hidden;
+      transform: translatey(0px);
+      animation: float 5s ease-in-out infinite;
+    }
+    

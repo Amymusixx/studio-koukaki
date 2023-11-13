@@ -1,14 +1,18 @@
+
 <?php
 
 get_header();
+
 ?>
 
     <main id="primary" class="site-main">
         <section class="banner animation fadeInDown">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " class="banner-img animation fadeInUp" alt="logo Fleurs d'oranger & chats errants">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " class="banner-img animation fadeInUp avatar" alt="logo Fleurs d'oranger & chats errants">
+        <video id="background-video" autoplay loop muted src="<?php echo get_stylesheet_directory_uri() . '/assets/medias/Studio+Koukaki-vidéo+header+sans+son+(1).mp4'; ?>">
+        </video>
         </section>
         <section id="#story" class="story animation fadeInUp">
-            <h2><span class="toAnim">L'histoire</span></h2>
+            <h2 class="square-animation"><span>L'histoire</span></h2>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
@@ -24,7 +28,7 @@ get_header();
             ?>
             <article id="characters" class="animation fadeInUp">
                 <div class="main-character">
-                    <h3><span class="animation-titre">Les personnages</span></h3>
+                    <h3 class="titre-animation"><span>Les personnages</span></h3>
                     <?php
                     $main_character = $characters_query->posts[0];
                     echo '<figure>';
@@ -50,7 +54,7 @@ get_header();
             </article>
             <article id="place" class="animation fadeInUp">
                 <div>
-                    <h3>Le Lieu</h3>
+                    <h3 class="titre_lieu square-animation">Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
 
