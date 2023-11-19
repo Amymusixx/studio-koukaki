@@ -1,4 +1,37 @@
 
+/* Animation pour les titres */
+
+.titre {
+  display:inline-block;
+  padding-right:9px;
+}
+
+.animation-titre {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.4s;
+}
+
+.animation-titre2 {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.7s;
+}
+
+  /* Animation de SlideIn vers le haut */
+    @keyframes SlideInUp {
+      from {
+        transform: translate3d(0, 20px, 0);
+      }
+    
+      to {
+        transform: none;
+      }
+    }
+
+    .SlideInUp {
+      animation-name: SlideInUp;
+  }
 
 /* Animation CSS pour la première section de l'accueil (banière image) */ 
 .animation {
@@ -40,6 +73,42 @@
     animation-name: fadeInDown;
   }
 
+/* Swiper pour la section characters */ 
+
+#characters {
+  display:flex;
+  flex-direction:column;
+  width:90%;
+}
+
+.titre-characters {
+  display:flex;
+  justify-content:flex-start;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: left;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-wrapper {
+  width:100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 85%;
+}
+
+
 
 
   /* Animation de rotation à l'infini pour les fleurs */ 
@@ -54,22 +123,7 @@
     100% {transform:rotate(1turn);}
 }
 
-/* Animation pour les titres */
 
-@keyframes wipe-enter {
-	0% {
-		transform: scale(0, .025);
-	}
-	50% {
-		transform: scale(1, .025);
-	}
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .titre-animation {
-    animation: wipe-enter 2s 1;
-  }
-}
 
 
   /* -------- Ajout de la section Oscars -------- */

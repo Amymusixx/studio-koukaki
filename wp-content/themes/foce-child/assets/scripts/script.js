@@ -1,14 +1,19 @@
 console.log("hello world");
 
-const observer = new IntersectionObserver(entries => {
-    // Loop over the entries
-    entries.forEach(entry => {
-      // If the element is visible
-      if (entry.isIntersecting) {
-        // Add the animation class
-        entry.target.classList.add('.square-animation');
-      }
-    });
-  });
-  
-  observer.observe(document.querySelector("main-character"));
+const titre = document.querySelector("titre")
+
+const callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("SlideInUp")
+    }
+  })
+}
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0
+}
+const myObserver = new IntersectionObserver(callback, options)
+let target = document.querySelector("main-character");
+myObserver.observe(target);
