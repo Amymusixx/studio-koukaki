@@ -1,5 +1,217 @@
+/* ------------- Menu burger ------------ */
 
-/* Animation pour les titres */
+.animation-titre-menu {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.3s;
+}
+
+.animation-titre-menu-2 {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.6s;
+}
+
+.animation-titre-menu-3 {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.9s;
+}
+
+.animation-titre-menu-4 {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1.2s;
+}
+
+.animation-menu {
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+}
+
+/* Animation de Fade-In pour le menu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.site-header {
+  background-color:#FFD5A2;
+  margin:-20px;
+}
+
+.titre-menu {
+  color:black;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  padding:15px;
+ 
+}
+
+.menu-logo {
+  height:20%;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  padding-bottom:25px;
+}
+
+.cat-blue, .cat-orange, .cat-black, .flower-orange, .flower-red, #fleur-violette, .flower-pink, .flower-white {
+  position:absolute;
+}
+
+.cat-blue {
+  top:150px;
+  left:250px;
+}
+
+.cat-orange {
+  bottom:100px;
+  left:120px;
+}
+
+.cat-black {
+  left:1000px;
+  top: 400px;
+}
+
+.floating-cat {
+  overflow: hidden;
+  transform: translatey(0px);
+  animation: float 3s ease-in-out infinite;
+}
+
+.flower-orange {
+  left:160px;
+  top:400px;
+}
+
+.flower-red {
+  right:-160px;
+  bottom:-160px;
+  height:400px;
+  width:400px;
+}
+
+.purple-flower {
+  position:absolute;
+  top: 60px;
+  left:-50px;
+  visibility:visible;
+}
+
+.flower-purple-closed {
+  visibility:hidden;
+}
+
+.flower-pink {
+  right:-30px;
+  bottom:400px;
+  height:60px;
+  width:60px;
+}
+
+.flower-white {
+  top:130px;
+  left:1000px;
+}
+
+.footer-menu {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:flex-end;
+  padding-top:60px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 50px;
+  right: -250px;
+  background-color: #FFF5E9;
+  padding-top: 60px;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 15px 8px 15px 32px;
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  display: block;
+  text-align:center;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  text-shadow: #FF5C00 1px 0 10px;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  right: 0;
+  width:100%;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top:-35px;
+  right: 200px;
+  font-size: 40px;
+  background-color:#FFD5A2;
+}
+
+.close span{
+position:absolute;
+top:-15px;
+right:10px;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 50px;
+}
+
+.burger-icon.active {
+  visibility:hidden;
+}
+
+#openBtn {
+  display:flex;
+  flex-direction:row;;
+  justify-content:flex-end;
+  position:absolute;
+  right:170px;
+  bottom:7px;
+}
+
+
+
+/* ---------- Animation pour les titres ---------- */
 
 .titre {
   display:inline-block;
@@ -34,6 +246,7 @@
   }
 
 /* Animation CSS pour la première section de l'accueil (banière image) */ 
+
 .animation {
     animation-duration: 1.5s;
     animation-fill-mode: both;
@@ -73,7 +286,7 @@
     animation-name: fadeInDown;
   }
 
-/* Swiper pour la section characters */ 
+/* ------------ Swiper pour la section characters ------------- */ 
 
 #characters {
   display:flex;
@@ -109,10 +322,9 @@
 }
 
 
+  /* ------ Animation de rotation à l'infini pour les fleurs ------ */ 
 
-
-  /* Animation de rotation à l'infini pour les fleurs */ 
-  .story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after, #oscars h3::before, #oscars h3::after, .site-footer ul::after {
+  .story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after, #oscars h3::before, #oscars h3::after, .site-footer ul::after, .flower-orange, .flower-red, #fleur-violette, .flower-pink, .flower-white {
     animation-name: rotation;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -123,10 +335,8 @@
     100% {transform:rotate(1turn);}
 }
 
-
-
-
   /* -------- Ajout de la section Oscars -------- */
+
   #oscars h3 {
     background-image: url("../images/oscars-fond.png") ;
     font-size: 3rem;
@@ -139,29 +349,7 @@
     text-align:left;
   }
 
-  @media screen and (max-width: 1192px) {
-    #oscars h3 {
-      font-size: 2.5em;
-    }
-  }
 
-  @media screen and (max-width: 900px) {
-    #oscars div {
-      width:85%;
-      padding-left:15px;
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    #oscars h3 {
-      font-size: 2rem;
-    }
-    #oscars .section-oscars-boxes::after {
-      position:absolute;
-      left:60%;
-      bottom:40%;
-    }
-  }
 
   .section-oscars-boxes::after {
     content: url("../images/logo_oscars_transp.png");
@@ -229,13 +417,7 @@
     .banner {
       min-height: 782px;
     }
-
-    @media screen and (max-width: 700px) {
-      #background-video {
-        visibility:hidden;
-      }
-    }
-
+   
     @keyframes float {
       0% {
         transform: translatey(0px);
@@ -254,3 +436,70 @@
       animation: float 5s ease-in-out infinite;
     }
     
+
+    /* -------------- Responsive ------------- */
+    
+
+    @media screen and (max-width: 1192px) {
+      #oscars h3 {
+        font-size: 2.5em;
+      }
+    }
+  
+    @media screen and (max-width: 900px) {
+      #oscars div {
+        width:85%;
+        padding-left:15px;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      #openBtn {
+        display:flex;
+        flex-direction:row;;
+        justify-content:flex-end;
+        position:absolute;
+        right:75px;
+        bottom:3px;
+      }
+    }
+  
+    @media screen and (max-width: 700px) {
+      #oscars h3 {
+        font-size: 2rem;
+      }
+      #oscars .section-oscars-boxes::after {
+        position:absolute;
+        left:60%;
+        bottom:40%;
+      }
+      #background-video {
+        visibility:hidden;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      #openBtn {
+        display:flex;
+        flex-direction:row;;
+        justify-content:flex-end;
+        position:absolute;
+        right:10px;
+        bottom:3px;
+      }
+    }
+    
+    @media screen and (max-width: 400px) {
+      #openBtn {
+        display:flex;
+        flex-direction:row;;
+        justify-content:flex-end;
+        position:absolute;
+        right:0px;
+        bottom:3px;
+      }
+    
+      .burger-icon span {
+        margin-right:30px;
+      }
+    }
