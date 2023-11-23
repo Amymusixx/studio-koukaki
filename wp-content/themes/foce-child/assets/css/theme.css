@@ -1,5 +1,17 @@
-/* ------------- Menu burger ------------ */
+/*  1. Style et personnalisation
+      1.1 Menu burger 
+      1.2 Animations
+        1.2.1 Animation des titres
+        1.2.2 Animation de la bannière 
+      1.3 Swiper characters 
+    2. Responsive 
 
+
+
+
+/* 1.1 ------------------------------ Menu burger -------------------------------- */
+
+/* Animations qui font apparaître les liens de menu les uns après les autres avec un effet de fade-in. */
 .animation-titre-menu {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -24,12 +36,13 @@
   animation-delay: 1.2s;
 }
 
+/* Animation d'apparition en Fade-In pour le menu */
 .animation-menu {
-  animation-duration: 0.7s;
+  animation-duration: 1s;
   animation-fill-mode: both;
 }
 
-/* Animation de Fade-In pour le menu */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -44,9 +57,22 @@
   animation-name: fadeIn;
 }
 
+/* Style pour le menu burger et l'en-tête du site */ 
 .site-header {
   background-color:#FFD5A2;
-  margin:-20px;
+  position:absolute;
+  width:100%;
+}
+
+.menu-burger {
+  visibility:visible;
+  background-color:#FFF5E9;
+  height:100%;
+}
+
+.menu-burger-hidden {
+  visibility:hidden;
+  height:0px;
 }
 
 .titre-menu {
@@ -54,18 +80,101 @@
   display:flex;
   flex-direction:row;
   justify-content:center;
-  padding:15px;
- 
+  padding:0px;
 }
 
 .menu-logo {
-  height:20%;
   display:flex;
   flex-direction:row;
   justify-content:center;
-  padding-bottom:25px;
+  padding: 20px 0 20px 0;
 }
 
+.menu-logo img {
+  height:15%;
+  width:15%;
+}
+
+.footer-menu {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:flex-end;
+  padding-top:60px;
+}
+
+/* Menu-burger links */
+#menu-burger a {
+  padding: 15px 8px 15px 32px;
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  display: block;
+  text-align:center;
+
+}
+
+#menu-burger a:hover {
+  text-shadow: #FF5C00 1px 0 10px;
+  transition-duration: 0.5s;
+}
+
+#menu-burger ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Close btn */
+.close {
+  font-size: 40px;
+  background-color:#FFD5A2;
+  position:absolute;
+  top:0px;
+  left:1235px;
+}
+
+.close-hidden {
+  font-size: 40px;
+  background-color:#FFD5A2;
+  visibility:hidden;
+}
+
+.close-hidden span{
+position:absolute;
+top:-2px;
+right:215px;
+}
+
+.close span{
+  position:absolute;
+  top:-2px;
+  right:5px;
+  }
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 50px;
+}
+
+.burger-icon-hidden {
+  visibility:hidden;
+}
+
+#openBtn {
+  display:flex;
+  flex-direction:row;
+  position:absolute;
+  left:1150px;
+  top:15px;
+
+}
+
+/* Placement des images de fleurs et chats en background du menu */
 .cat-blue, .cat-orange, .cat-black, .flower-orange, .flower-red, #fleur-violette, .flower-pink, .flower-white {
   position:absolute;
 }
@@ -110,9 +219,6 @@
   visibility:visible;
 }
 
-.flower-purple-closed {
-  visibility:hidden;
-}
 
 .flower-pink {
   right:-30px;
@@ -126,126 +232,29 @@
   left:1000px;
 }
 
-.footer-menu {
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:flex-end;
-  padding-top:60px;
-}
+/* 1.2 --------------------------------- Animations --------------------------- 
 
-.sidenav {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 50px;
-  right: -250px;
-  background-color: #FFF5E9;
-  padding-top: 60px;
-}
-
-/* Sidenav menu links */
-.sidenav a {
-  padding: 15px 8px 15px 32px;
-  text-decoration: none;
-  font-size: 50px;
-  color: black;
-  display: block;
-  text-align:center;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  text-shadow: #FF5C00 1px 0 10px;
-}
-
-.sidenav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Active class */
-.sidenav.active {
-  right: 0;
-  width:100%;
-}
-
-/* Close btn */
-.sidenav .close {
-  position: absolute;
-  top:-35px;
-  right: 200px;
-  font-size: 40px;
-  background-color:#FFD5A2;
-}
-
-.close span{
-position:absolute;
-top:-15px;
-right:10px;
-}
-
-/* Icône burger */
-.burger-icon span {
-  display: block;
-  width: 30px;
-  height: 2px;
-  background-color: black;
-  margin: 6px 50px;
-}
-
-.burger-icon.active {
-  visibility:hidden;
-}
-
-#openBtn {
-  display:flex;
-  flex-direction:row;;
-  justify-content:flex-end;
-  position:absolute;
-  right:170px;
-  bottom:7px;
-}
-
-
-
-/* ---------- Animation pour les titres ---------- */
+1.2.1 Animation pour les titres (le reste est géré par la librairie AOS.js */
 
 .titre {
   display:inline-block;
-  padding-right:9px;
 }
 
-.animation-titre {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-delay: 0.4s;
+.titre-composed {
+  display:inline-block;
+  padding-right:10px;
 }
 
-.animation-titre2 {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-delay: 0.7s;
+/* 1.2.2 Animation CSS pour la première section de l'accueil (banière image) */ 
+
+.box-logo {
+  height:100%;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  padding-top:300px;
 }
-
-  /* Animation de SlideIn vers le haut */
-    @keyframes SlideInUp {
-      from {
-        transform: translate3d(0, 20px, 0);
-      }
-    
-      to {
-        transform: none;
-      }
-    }
-
-    .SlideInUp {
-      animation-name: SlideInUp;
-  }
-
-/* Animation CSS pour la première section de l'accueil (banière image) */ 
 
 .animation {
     animation-duration: 1.5s;
@@ -286,7 +295,8 @@ right:10px;
     animation-name: fadeInDown;
   }
 
-/* ------------ Swiper pour la section characters ------------- */ 
+
+/* 1.3 ---------------------- Swiper pour la section characters ----------------------------- */ 
 
 #characters {
   display:flex;
@@ -423,7 +433,7 @@ right:10px;
         transform: translatey(0px);
       }
       50% {
-        transform: translatey(-40px);
+        transform: translatey(-50px);
       }
       100% {
         transform: translatey(0px);
@@ -432,10 +442,19 @@ right:10px;
 
     .avatar {
       overflow: hidden;
-      transform: translatey(0px);
-      animation: float 5s ease-in-out infinite;
+      animation: float 4s ease-in-out infinite;
     }
     
+
+    .story #place {
+      background-image: url("../images/Studio_Koukaki-image_place.png");
+    }
+
+    .big-cloud {
+      position: absolute;
+      left: 1050px;
+      top:50px;
+    }
 
     /* -------------- Responsive ------------- */
     

@@ -20,6 +20,8 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 	<?php wp_head(); ?>
     
 </head>
@@ -30,18 +32,18 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-    <h4 class="titre-menu">Fleurs d'orangers & chats errants</h4>
-		<a href="#" id="openBtn">
-  <span class="burger-icon">
+    <div><h4 class="titre-menu">Fleurs d'orangers & chats errants</h4>
+    <a href="#" id="openBtn"><span class="burger-icon">
     <span></span>
     <span></span>
     <span></span>
   </span>
 </a>
-<nav>
-        <div id="mySidenav" class="sidenav">
-  <a id="closeBtn" href="#" class="close"><span>×</span></a>
-  <div class="menu-logo"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>"></div>
+<a id="closeBtn" href="#" class="close-hidden"><span>×</span></a>
+</div>
+    
+    <div id="menu-burger" class="menu-burger-hidden">
+      
   <img class="cat-blue floating-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat.png'; ?>">
   <img class="cat-orange floating-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat (1).png'; ?>">
   <img class="cat-black floating-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Group 180.png'; ?>">
@@ -50,8 +52,9 @@
   <img id="fleur-violette" class="" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orchid.png'; ?>">
   <img class="flower-pink" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/random_flower.png'; ?>">
   <img class="flower-white" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Sunflower.png'; ?>">
-  
-  <ul>
+
+    <div class="menu-logo"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>"></div>
+      <ul>
     <li><a id="close-story" href="#section-story"><span class="animation-titre slideInUp">Histoire</span></a>
     <li><a id="close-characters" href="#characters">Personnages</a></li>
     <li><a id="close-place" href="#place">Lieu</a></li>
@@ -59,8 +62,18 @@
   </ul>
   <div class="footer-menu"><p>STUDIO KOUKAKI</p></div>
 </div>
+      <div>
+
+		<div id="mySidenav" class="sidenav">
+    
+</div>
+
+<nav>
+        
 
 
 
 </nav>
+
+
 	</header><!-- #masthead -->

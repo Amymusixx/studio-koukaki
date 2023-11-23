@@ -1,13 +1,1 @@
-{"devDependencies": {
-    "serve": "^11.2.0"
-  },
-  "main": "template-parts/characters-swiper.php",
-  "name": "swiper-effect-coverflow",
-  "scripts": {
-    "build": "echo This is a static template, there is no bundler or bundling involved!",
-    "start": "serve"
-  },
-  "tags": [
-    "swiper"
-  ]
-}
+{"devDependencies":{"serve":"^11.2.0"},"main":"template-parts/characters-swiper.php","name":"swiper-effect-coverflow","scripts":{"build":"echo This is a static template, there is no bundler or bundling involved!","start":"serve"},"tags":["swiper"],"dependencies":{"aos":"^2.3.4"}}
