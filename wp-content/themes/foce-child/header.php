@@ -32,18 +32,18 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-    <div><h4 class="titre-menu">Fleurs d'orangers & chats errants</h4>
-    <a href="#" id="openBtn"><span class="burger-icon">
+  <h4 class="titre-menu">Fleurs d'orangers & chats errants</h4>
+		<a href="#" id="openBtn">
+  <span class="burger-icon">
     <span></span>
     <span></span>
     <span></span>
   </span>
 </a>
-<a id="closeBtn" href="#" class="close-hidden"><span>×</span></a>
-</div>
-    
-    <div id="menu-burger" class="menu-burger-hidden">
-      
+<nav>
+        <div id="mySidenav" class="sidenav" data-200-top="@active:visible" data-0-top="@active:hide">
+  <a id="closeBtn" href="#" class="close"><span>×</span></a>
+  <div class="menu-logo"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>"></div>
   <img class="cat-blue floating-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat.png'; ?>">
   <img class="cat-orange floating-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat (1).png'; ?>">
   <img class="cat-black floating-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Group 180.png'; ?>">
@@ -52,9 +52,8 @@
   <img id="fleur-violette" class="" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orchid.png'; ?>">
   <img class="flower-pink" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/random_flower.png'; ?>">
   <img class="flower-white" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Sunflower.png'; ?>">
-
-    <div class="menu-logo"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>"></div>
-      <ul>
+  
+  <ul>
     <li><a id="close-story" href="#section-story"><span class="animation-titre slideInUp">Histoire</span></a>
     <li><a id="close-characters" href="#characters">Personnages</a></li>
     <li><a id="close-place" href="#place">Lieu</a></li>
@@ -62,18 +61,14 @@
   </ul>
   <div class="footer-menu"><p>STUDIO KOUKAKI</p></div>
 </div>
-      <div>
-
-		<div id="mySidenav" class="sidenav">
-    
-</div>
-
-<nav>
-        
 
 
 
 </nav>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<script>
+	var s = skrollr.init();
+	</script>
+  
 	</header><!-- #masthead -->

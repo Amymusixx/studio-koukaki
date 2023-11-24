@@ -39,7 +39,7 @@ get_header();
             <article id="place" class="animation fadeInUp">
                 <div>
                     <h3 class="titre-characters"><span class="titre-composed" data-aos="fade-up" data-aos-duration="1000">Le </span><span class="titre-composed" data-aos="fade-up" data-aos-duration="2000"> Lieu</span></h3>
-                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?> " id="big-cloud" class="big-cloud" data-bottom-top="transform:translate3d(0, 0px, 0)" data-top-bottom="transform:translate3d(0, -200px, 0)">
+                    <div class="clouds"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Nuages.png'; ?> " id="clouds"></div>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
 
@@ -58,6 +58,17 @@ get_header();
             <?php 
                 include("template-parts/section-oscars.php"); ?>
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+        <script>
+        const clouds = document.getElementById('clouds');
+new simpleParallax(clouds, {
+    orientation: 'left',
+    scale: 2.5,
+    overflow: true,
+});
+
+
+</script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 	<script>

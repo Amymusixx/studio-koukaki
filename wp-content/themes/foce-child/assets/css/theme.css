@@ -12,6 +12,7 @@
 /* 1.1 ------------------------------ Menu burger -------------------------------- */
 
 /* Animations qui font apparaître les liens de menu les uns après les autres avec un effet de fade-in. */
+
 .animation-titre-menu {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -36,13 +37,12 @@
   animation-delay: 1.2s;
 }
 
-/* Animation d'apparition en Fade-In pour le menu */
 .animation-menu {
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   animation-fill-mode: both;
 }
 
-
+/* Animation de Fade-In pour le menu */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -57,22 +57,9 @@
   animation-name: fadeIn;
 }
 
-/* Style pour le menu burger et l'en-tête du site */ 
 .site-header {
   background-color:#FFD5A2;
-  position:absolute;
-  width:100%;
-}
-
-.menu-burger {
-  visibility:visible;
-  background-color:#FFF5E9;
-  height:100%;
-}
-
-.menu-burger-hidden {
-  visibility:hidden;
-  height:0px;
+  margin:-20px;
 }
 
 .titre-menu {
@@ -80,101 +67,18 @@
   display:flex;
   flex-direction:row;
   justify-content:center;
-  padding:0px;
+  padding:15px;
+ 
 }
 
 .menu-logo {
+  height:20%;
   display:flex;
   flex-direction:row;
   justify-content:center;
-  padding: 20px 0 20px 0;
+  padding-bottom:25px;
 }
 
-.menu-logo img {
-  height:15%;
-  width:15%;
-}
-
-.footer-menu {
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:flex-end;
-  padding-top:60px;
-}
-
-/* Menu-burger links */
-#menu-burger a {
-  padding: 15px 8px 15px 32px;
-  text-decoration: none;
-  font-size: 50px;
-  color: black;
-  display: block;
-  text-align:center;
-
-}
-
-#menu-burger a:hover {
-  text-shadow: #FF5C00 1px 0 10px;
-  transition-duration: 0.5s;
-}
-
-#menu-burger ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Close btn */
-.close {
-  font-size: 40px;
-  background-color:#FFD5A2;
-  position:absolute;
-  top:0px;
-  left:1235px;
-}
-
-.close-hidden {
-  font-size: 40px;
-  background-color:#FFD5A2;
-  visibility:hidden;
-}
-
-.close-hidden span{
-position:absolute;
-top:-2px;
-right:215px;
-}
-
-.close span{
-  position:absolute;
-  top:-2px;
-  right:5px;
-  }
-
-/* Icône burger */
-.burger-icon span {
-  display: block;
-  width: 30px;
-  height: 2px;
-  background-color: black;
-  margin: 6px 50px;
-}
-
-.burger-icon-hidden {
-  visibility:hidden;
-}
-
-#openBtn {
-  display:flex;
-  flex-direction:row;
-  position:absolute;
-  left:1150px;
-  top:15px;
-
-}
-
-/* Placement des images de fleurs et chats en background du menu */
 .cat-blue, .cat-orange, .cat-black, .flower-orange, .flower-red, #fleur-violette, .flower-pink, .flower-white {
   position:absolute;
 }
@@ -219,6 +123,9 @@ right:215px;
   visibility:visible;
 }
 
+.flower-purple-closed {
+  visibility:hidden;
+}
 
 .flower-pink {
   right:-30px;
@@ -231,6 +138,90 @@ right:215px;
   top:130px;
   left:1000px;
 }
+
+.footer-menu {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:flex-end;
+  padding-top:60px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 50px;
+  right: -250px;
+  background-color: #FFF5E9;
+  padding-top: 60px;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 15px 8px 15px 32px;
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  display: block;
+  text-align:center;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  text-shadow: #FF5C00 1px 0 10px;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  right: 0;
+  width:100%;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top:-35px;
+  right: 200px;
+  font-size: 40px;
+  background-color:#FFD5A2;
+}
+
+.close span{
+position:absolute;
+top:-15px;
+right:10px;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 50px;
+}
+
+.burger-icon.active {
+  visibility:hidden;
+}
+
+#openBtn {
+  display:flex;
+  flex-direction:row;;
+  justify-content:flex-end;
+  position:absolute;
+  right:170px;
+  bottom:7px;
+}
+
 
 /* 1.2 --------------------------------- Animations --------------------------- 
 
@@ -450,11 +441,12 @@ right:215px;
       background-image: url("../images/Studio_Koukaki-image_place.png");
     }
 
-    .big-cloud {
+    .clouds {
       position: absolute;
-      left: 1050px;
-      top:50px;
+      top:20px;
+      left:450px;
     }
+
 
     /* -------------- Responsive ------------- */
     

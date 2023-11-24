@@ -1,6 +1,6 @@
 console.log("coucou");
 
-var menuBurger = document.getElementById("menu-burger");
+var sidenav = document.getElementById("mySidenav");
 var openBtn = document.getElementById("openBtn");
 var closeBtn = document.getElementById("closeBtn");
 
@@ -20,13 +20,9 @@ closePlace.onclick = closeFullMenu;
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-  menuBurger.classList.remove("menu-burger-hidden");
-  menuBurger.classList.add("menu-burger");
-  openBtn.classList.add("burger-icon-hidden");
-  closeBtn.classList.remove("close-hidden");
-  closeBtn.classList.add("close");
-  menuBurger.classList.add("animation-menu");
-  menuBurger.classList.add("fadeIn");
+  sidenav.classList.add("active");
+  sidenav.classList.add("animation-menu");
+  sidenav.classList.add("fadeIn");
   closeStory.classList.add("animation-titre-menu");
   closeStory.classList.add("fadeInUp");
   closeCharacters.classList.add("animation-titre-menu-2");
@@ -41,13 +37,10 @@ function openNav() {
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-  menuBurger.classList.remove("menu-burger");
-  menuBurger.classList.add("menu-burger-hidden");
-  openBtn.classList.remove("burger-icon-hidden");
-  closeBtn.classList.remove("close");
-  closeBtn.classList.add("close-hidden");
-  menuBurger.classList.remove("animation-menu");
-  menuBurger.classList.remove("fadeIn");
+  sidenav.classList.remove("active");
+  sidenav.classList.remove("active");
+  sidenav.classList.remove("animation-menu");
+  sidenav.classList.remove("fadeIn");
   closeStory.classList.remove("animation-titre-menu");
   closeStory.classList.remove("fadeInUp");
   closeCharacters.classList.remove("animation-titre-menu-2");
@@ -59,8 +52,8 @@ function closeNav() {
   purpleFlower.classList.remove("purple-flower");
 }
 
-/* Sert à fermer les ancres de menu sur la précédente version du menu */ 
 function closeFullMenu() {
+  sidenav.classList.remove("active");
   closeStory.classList.remove("animation-titre-menu");
   closeStory.classList.remove("fadeInUp");
   closeCharacters.classList.remove("animation-titre-menu-2");
