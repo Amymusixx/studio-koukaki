@@ -1,18 +1,19 @@
+@charset "UTF-8";
 /*  1. Style et personnalisation
       1.1 Menu burger 
       1.2 Animations
         1.2.1 Animation des titres
         1.2.2 Animation de la bannière 
+        1.2.3 Animation de rotation des fleurs
       1.3 Swiper characters 
+      1.4 Nouvelle section oscars 
+
     2. Responsive 
 
 
 
-
 /* 1.1 ------------------------------ Menu burger -------------------------------- */
-
 /* Animations qui font apparaître les liens de menu les uns après les autres avec un effet de fade-in. */
-
 .animation-titre-menu {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -47,54 +48,52 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
-
 .fadeIn {
   animation-name: fadeIn;
 }
 
 .site-header {
-  background-color:#FFD5A2;
-  margin:-20px;
+  background-color: #FFD5A2;
+  margin: -20px;
 }
 
 .titre-menu {
-  color:black;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  padding:15px;
- 
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
 }
 
 .menu-logo {
-  height:20%;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  padding-bottom:25px;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 25px;
 }
 
+/* positionnement et réglages des images de chats et fleurs sur le menu en full screen */
 .cat-blue, .cat-orange, .cat-black, .flower-orange, .flower-red, #fleur-violette, .flower-pink, .flower-white {
-  position:absolute;
+  position: absolute;
 }
 
 .cat-blue {
-  top:150px;
-  left:250px;
+  top: 150px;
+  left: 250px;
 }
 
 .cat-orange {
-  bottom:100px;
-  left:120px;
+  bottom: 100px;
+  left: 120px;
 }
 
 .cat-black {
-  left:1000px;
+  left: 1000px;
   top: 400px;
 }
 
@@ -105,46 +104,46 @@
 }
 
 .flower-orange {
-  left:160px;
-  top:400px;
+  left: 160px;
+  top: 400px;
 }
 
 .flower-red {
-  right:-160px;
-  bottom:-160px;
-  height:400px;
-  width:400px;
+  right: -160px;
+  bottom: -160px;
+  height: 400px;
+  width: 400px;
 }
 
 .purple-flower {
-  position:absolute;
+  position: absolute;
   top: 60px;
-  left:-50px;
-  visibility:visible;
+  left: -50px;
+  visibility: visible;
 }
 
 .flower-purple-closed {
-  visibility:hidden;
+  visibility: hidden;
 }
 
 .flower-pink {
-  right:-30px;
-  bottom:400px;
-  height:60px;
-  width:60px;
+  right: -30px;
+  bottom: 400px;
+  height: 60px;
+  width: 60px;
 }
 
 .flower-white {
-  top:130px;
-  left:1000px;
+  top: 130px;
+  left: 1000px;
 }
 
 .footer-menu {
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:flex-end;
-  padding-top:60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 60px;
 }
 
 .sidenav {
@@ -158,14 +157,14 @@
   padding-top: 60px;
 }
 
-/* Sidenav menu links */
+/* Liens du menu en full screen */
 .sidenav a {
   padding: 15px 8px 15px 32px;
   text-decoration: none;
   font-size: 50px;
   color: black;
   display: block;
-  text-align:center;
+  text-align: center;
   transition: 0.3s;
 }
 
@@ -179,25 +178,24 @@
   margin: 0;
 }
 
-/* Active class */
 .sidenav.active {
   right: 0;
-  width:100%;
+  width: 100%;
 }
 
 /* Close btn */
 .sidenav .close {
   position: absolute;
-  top:-35px;
+  top: -35px;
   right: 200px;
   font-size: 40px;
-  background-color:#FFD5A2;
+  background-color: #FFD5A2;
 }
 
-.close span{
-position:absolute;
-top:-15px;
-right:10px;
+.close span {
+  position: absolute;
+  top: -15px;
+  right: 10px;
 }
 
 /* Icône burger */
@@ -210,94 +208,133 @@ right:10px;
 }
 
 .burger-icon.active {
-  visibility:hidden;
+  visibility: hidden;
 }
 
 #openBtn {
-  display:flex;
-  flex-direction:row;;
-  justify-content:flex-end;
-  position:absolute;
-  right:170px;
-  bottom:7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  right: 170px;
+  bottom: 7px;
 }
-
 
 /* 1.2 --------------------------------- Animations --------------------------- 
 
 1.2.1 Animation pour les titres (le reste est géré par la librairie AOS.js */
-
 .titre {
-  display:inline-block;
+  display: inline-block;
 }
 
 .titre-composed {
-  display:inline-block;
-  padding-right:10px;
+  display: inline-block;
+  padding-right: 10px;
 }
 
-/* 1.2.2 Animation CSS pour la première section de l'accueil (banière image) */ 
-
+/* 1.2.2 Animation CSS pour la première section de l'accueil (banière image) */
 .box-logo {
-  height:100%;
-  width:100%;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  padding-top:300px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 300px;
 }
 
 .animation {
-    animation-duration: 1.5s;
-    animation-fill-mode: both;
-    animation-delay: 0.4s;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 0.4s;
+}
+
+/* Animation de Fade-In vers le haut */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 25%, 0);
   }
-    /* Animation de Fade-In vers le haut */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translate3d(0, 25%, 0);
-        }
-      
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-      
-    .fadeInUp {
-        animation-name: fadeInUp;
-    }
-
-    /* Animation de fade-in vers le bas */
-      @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translate3d(0, -25%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      transform: none;
-    }
+  to {
+    opacity: 1;
+    transform: none;
   }
-  
-  .fadeInDown {
-    animation-name: fadeInDown;
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/* Animation de fade-in vers le bas */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -25%, 0);
   }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+}
 
+/* Ajout de la vidéo dans la première section de l'accueil */
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
 
-/* 1.3 ---------------------- Swiper pour la section characters ----------------------------- */ 
+.banner {
+  min-height: 782px;
+}
 
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-50px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.float {
+  overflow: hidden;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* 1.2.3 ------ Animation de rotation à l'infini pour les fleurs ------ */
+.story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after, #oscars h3::before, #oscars h3::after, .site-footer ul::after, .flower-orange, .flower-red, #fleur-violette, .flower-pink, .flower-white {
+  animation-name: rotation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+/* 1.3 ---------------------- Swiper pour la section characters ----------------------------- */
 #characters {
-  display:flex;
-  flex-direction:column;
-  width:90%;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
 }
 
 .titre-characters {
-  display:flex;
-  justify-content:flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .swiper {
@@ -314,7 +351,7 @@ right:10px;
 }
 
 .swiper-wrapper {
-  width:100%;
+  width: 100%;
 }
 
 .swiper-slide img {
@@ -322,195 +359,134 @@ right:10px;
   width: 85%;
 }
 
-
-  /* ------ Animation de rotation à l'infini pour les fleurs ------ */ 
-
-  .story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after, #oscars h3::before, #oscars h3::after, .site-footer ul::after, .flower-orange, .flower-red, #fleur-violette, .flower-pink, .flower-white {
-    animation-name: rotation;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+/* 1.4 ---------------------------- Ajout de la section Oscars -------------------------- */
+#oscars h3 {
+  background-image: url("../images/oscars-fond.png");
+  font-size: 3rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 3em 2em;
+  margin: 0;
+  background-position: center;
+  color: white;
+  text-align: left;
 }
 
-  @keyframes rotation {
-    100% {transform:rotate(1turn);}
+.section-oscars-boxes::after {
+  content: url("../images/logo_oscars_transp.png");
+  position: absolute;
+  left: 70%;
+  bottom: 44%;
 }
 
-  /* -------- Ajout de la section Oscars -------- */
+#oscars h3::before {
+  content: url("../images/Sunflower.png");
+  position: absolute;
+  bottom: 70%;
+  right: 80%;
+}
 
+#oscars h3::after {
+  content: url("../images/orchid.png");
+  position: absolute;
+  bottom: 90%;
+  left: 93%;
+}
+
+.section-oscars-boxes {
+  display: flex;
+  flex-direction: row;
+  margin: 100px 0px 75px 0px;
+  padding-left: 200px;
+}
+
+.oscars-nomination {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+}
+
+.titre-oscars-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+/* Disparition des fleurs sur la section studio */
+.site-footer::after {
+  visibility: hidden;
+}
+
+.site-footer::before {
+  visibility: hidden;
+}
+
+.story #place {
+  background-image: url("../images/Studio_Koukaki-image_place.png");
+}
+
+.clouds {
+  position: absolute;
+  top: 20px;
+  left: 450px;
+}
+
+/* ------------------------------ Responsive ------------------------------- */
+@media screen and (max-width: 1192px) {
   #oscars h3 {
-    background-image: url("../images/oscars-fond.png") ;
-    font-size: 3rem;
-	background-repeat: no-repeat;
-	background-size: contain;
-	padding: 3em 2em;
-	margin: 0;
-	background-position: center;
-    color:white;
-    text-align:left;
+    font-size: 2.5em;
   }
-
-
-
-  .section-oscars-boxes::after {
-    content: url("../images/logo_oscars_transp.png");
-    position:absolute;
-    left:70%;
-    bottom:44%;
+}
+@media screen and (max-width: 900px) {
+  #oscars div {
+    width: 85%;
+    padding-left: 15px;
   }
-
-  #oscars h3::before {
-    content: url("../images/Sunflower.png");
-    position:absolute;
-    bottom:70%;
-    right:80%;
+}
+@media screen and (max-width: 800px) {
+  #openBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    right: 75px;
+    bottom: 3px;
   }
-
-  #oscars h3::after {
-    content: url("../images/orchid.png");
-    position:absolute;
-    bottom:90%;
-    left:93%;
+}
+@media screen and (max-width: 700px) {
+  #oscars h3 {
+    font-size: 2rem;
   }
-
-  .section-oscars-boxes {
-    display:flex;
-    flex-direction:row;
-    margin: 100px 0px 75px 0px;
-    padding-left:200px;
+  #oscars .section-oscars-boxes::after {
+    position: absolute;
+    left: 60%;
+    bottom: 40%;
   }
-
-  .oscars-nomination {
-    display:flex;
-    flex-direction:row;
-    width:20%;
-  }
-
-  .titre-oscars-box {
-    display:flex;
-    flex-direction:row;
-    justify-content:flex-start;
-    width:70%;
-  }
-
-  /* Disparition des fleurs sur la section studio */
-  .site-footer::after {
-    visibility:hidden;
-  }
-
-  .site-footer::before {
-    visibility:hidden;
-  }
-
-  /* Ajout de la vidéo dans la première section de l'accueil */
   #background-video {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    }
-
-    .banner {
-      min-height: 782px;
-    }
-   
-    @keyframes float {
-      0% {
-        transform: translatey(0px);
-      }
-      50% {
-        transform: translatey(-50px);
-      }
-      100% {
-        transform: translatey(0px);
-      }
-    }
-
-    .avatar {
-      overflow: hidden;
-      animation: float 4s ease-in-out infinite;
-    }
-    
-
-    .story #place {
-      background-image: url("../images/Studio_Koukaki-image_place.png");
-    }
-
-    .clouds {
-      position: absolute;
-      top:20px;
-      left:450px;
-    }
-
-
-    /* -------------- Responsive ------------- */
-    
-
-    @media screen and (max-width: 1192px) {
-      #oscars h3 {
-        font-size: 2.5em;
-      }
-    }
-  
-    @media screen and (max-width: 900px) {
-      #oscars div {
-        width:85%;
-        padding-left:15px;
-      }
-    }
-
-    @media screen and (max-width: 800px) {
-      #openBtn {
-        display:flex;
-        flex-direction:row;;
-        justify-content:flex-end;
-        position:absolute;
-        right:75px;
-        bottom:3px;
-      }
-    }
-  
-    @media screen and (max-width: 700px) {
-      #oscars h3 {
-        font-size: 2rem;
-      }
-      #oscars .section-oscars-boxes::after {
-        position:absolute;
-        left:60%;
-        bottom:40%;
-      }
-      #background-video {
-        visibility:hidden;
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-      #openBtn {
-        display:flex;
-        flex-direction:row;;
-        justify-content:flex-end;
-        position:absolute;
-        right:10px;
-        bottom:3px;
-      }
-    }
-    
-    @media screen and (max-width: 400px) {
-      #openBtn {
-        display:flex;
-        flex-direction:row;;
-        justify-content:flex-end;
-        position:absolute;
-        right:0px;
-        bottom:3px;
-      }
-    
-      .burger-icon span {
-        margin-right:30px;
-      }
-    }
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 600px) {
+  #openBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    right: 10px;
+    bottom: 3px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #openBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0px;
+    bottom: 3px;
+  }
+  .burger-icon span {
+    margin-right: 30px;
+  }
+}/*# sourceMappingURL=theme.css.map */

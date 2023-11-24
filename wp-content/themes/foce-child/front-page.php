@@ -7,7 +7,7 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner animation fadeInDown">
-            <div class="box-logo" data-top-bottom="transform:translate3d(0, 100px, 0); opacity:0;" data-bottom-top="transform:translate3d(0, -300px, 0); opacity:3;"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " id="image"  class="animation avatar" alt="logo Fleurs d'oranger & chats errants"></div>
+            <div class="box-logo" data-top-bottom="transform:translate3d(0, 100px, 0); opacity:0;" data-bottom-top="transform:translate3d(0, -300px, 0); opacity:3;"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " id="image"  class="animation float" alt="logo Fleurs d'oranger & chats errants"></div>
             <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
         
         <video id="background-video" autoplay loop muted src="<?php echo get_stylesheet_directory_uri() . '/assets/medias/Studio+Koukaki-vidéo+header+sans+son+(1).mp4'; ?>">
